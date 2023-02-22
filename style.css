@@ -1,0 +1,135 @@
+*{
+    margin: 0px;
+    padding:0px;
+    box-sizing: border-box;
+}
+
+body{ 
+    background-image: url(./image.jpg);
+    background-size:cover ;
+    background-attachment:fixed;
+    font-family: sans-serif;
+    opacity: 1;
+}
+nav{
+    position: fixed;
+    right: 0;
+    left: 0;
+}
+
+ul{
+    display: flex;
+    list-style:none;
+    background-color: black;
+    justify-content: flex-end;
+    padding-right: 20px;
+}
+
+li{
+    width: 120px;
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+    /* it mkes hover look gud  */
+}
+
+a{
+    text-decoration: none;
+    color:white;
+}
+a:hover{
+    color:yellowgreen;
+}
+
+li:hover{
+    background-color:#808080;
+    border-radius: 5px;
+}
+
+.fa{
+    margin-right: 8px;
+    /* will give gap between icone and text */
+}
+
+.menu1{
+    display: none;
+    /* to hide the drop */
+}
+
+.navbar ul li:hover .menu1{
+    display:block;
+    position: absolute;
+    background-color: black;
+    margin-top: 20px;
+    margin-left: -15px;
+    /*  .navbar ul li:hover -> to specife on which element will hover (navbar}
+        .menu1 -> to specife on which element changes will be made (brop)
+         display:block;
+         position: absolute;
+         background-color: black;
+         margin-top: 15px;
+         margin-left: -15px; -> for styling the dropbox*/
+}
+
+.navbar ul li:hover .menu1 ul{
+    display: block;
+    /* as we have made ul as row flex , our dropbok is in row 
+     here we particulary sepcify for which ul we want it bolck */
+}
+
+.navbar ul li:hover .menu1 ul li a:hover{
+    color:yellowgreen;
+}
+
+.container{
+    height: 500px;
+    width: 700px;
+    position: relative;
+    top:140px;
+    left:750px;
+    z-index: -1;
+    display:grid;
+    grid-template-columns: repeat(2, auto);
+    gap:10px;
+    animation: animation 4s 0s;
+}
+@keyframes animation{
+    0%{
+        top:140px;
+        left:750px;
+    }
+    50%{
+        top:100px;
+        left:700px;
+    }
+    100%{
+        top:140px;
+        left:750px;
+    }
+    
+}
+
+.s-box{
+    background-color:#808080;
+    border: 3px solid black;
+    padding: 100px;
+    color: white;
+    font-size: 35px;
+
+}
+.s-box:hover{
+    color: yellowgreen;
+    font-size: 40;
+}
+ 
+
+.no1,.no4{
+    border-radius: 10px 100px;;
+}
+.no2,.no3{
+    border-radius: 100px 10px;
+}
+.para{
+    position: relative;
+    top:170px;
+}
